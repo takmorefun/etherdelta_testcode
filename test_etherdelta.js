@@ -143,20 +143,6 @@ function execTradeToken(contract, tokenGet, amountget, tokenGive, amountGive,
    sendTransaction(rawTx, privstr);
 }
 
-//amountfill関数
-function amountfillToken(contract, tokenGet, amountget, tokenGive, amountGive, expires, orderNonce, order_account, trade_amount, from_account, to_account, privstr){
-   //"データ"と言われる実行メソッドを指定するためのバイナリ(MethodIDと言われるもの)を作成
-   var data = contract.trade.getData(tokenGet, amountget, tokenGive, amountGive, expires, orderNonce, order_account, 0, '0x0', '0x0', trade_amount, { gas: 1000000, value: 0 });
-   console.log(data)
-   //"データ"をトランザクションに設定する
-   value = 0
-   var rawTx = setTransaction(data, from_account, to_account, value);
-   console.log(rawTx)
-   //トランザクションを送る
-   sendTransaction(rawTx, privstr);
-}
-
-
 //トークン上の関数----------------------------------------------------------------------------
 
 //approve処理に必要な分の関数の定義
@@ -198,10 +184,6 @@ function approveToken(token_contract, token_address, from_account, value, privst
    //トランザクションを送る
    sendTransaction(rawTx, privstr);
 }
-
-let token_contract = web3.eth.contract(minABI).at(contractTokenAddr);
-var approve_value_1 = 900e18
-approveToken(token_contract, contractTokenAddr, senderAddress_1, approve_value_1, privStr_1)
 
 //---------------------------------------------------------------------------------------------
 
