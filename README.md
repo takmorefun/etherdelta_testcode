@@ -24,4 +24,20 @@ cd /path/to/your/etherdelta/directory
 npm install
 ```
 
+### how to deploy
+- change deploy.js file according to your metamask and infura environment
+```
+var mnemonic = 'your mnemonic';
+  var accessToken = 'your infura access token';
+  const provider = new HDWalletProvider(
+      mnemonic,
+      "https://ropsten.infura.io/" + accessToken
+  );
+  const web3 = new Web3(provider);
+```
+- exec deploy
+```
+node deploy.js --address="your address" --admin="your address" --feeAccount="your address" --accountLevelsAddr="your address"  --sendImmediately=True
+```
+
 
