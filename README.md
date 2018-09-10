@@ -6,6 +6,9 @@
 -  metamask(ropsten network)
 -  infura(ropsten network)
 
+## documents
+https://www.slideshare.net/takuyamatsumoto714/dexresearch?qid=fc4f2717-c9d0-4ba8-b483-2fe64b0a7f93&v=&b=&from_search=1
+
 ## set up
 
 ### clone this repository to local environment
