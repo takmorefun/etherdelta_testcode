@@ -5,6 +5,7 @@
 -  npm 5.6.0
 -  metamask(ropsten network)
 -  infura(ropsten network)
+-  python2.7.X (required for node-gyp rebuild)
 
 ## documents
 https://www.slideshare.net/takuyamatsumoto714/dexresearch?qid=fc4f2717-c9d0-4ba8-b483-2fe64b0a7f93&v=&b=&from_search=1
